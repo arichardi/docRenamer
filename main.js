@@ -32,6 +32,13 @@ app.whenReady().then( () => {
         filesRenamer(oldName, newName)
     })
     createMainWindow();
+
+    app.on('window-all-closed', () => {
+        if(process.platform !== "darwin"){
+            app.quit();
+        }
+    })
+
 })
 
 //executable Functions

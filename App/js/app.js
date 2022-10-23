@@ -1,5 +1,5 @@
-const REGEX = /[\\][A-Za-z0-9]+[.][a-z]{3}/gm
-
+const REGEX = /[A-Za-z0-9\u00C0-\u00FF]+_?[0-9]{0,2}?[.][a-z]{3}/gm
+const REGEX_TYPE = /[.][a-zA-Z]{3}?/
 const folderButton = document.querySelector('#folder-btn')
 const elementQty = document.querySelector('.numberElements')
 const dirAddress = document.querySelector('.directory')
@@ -16,10 +16,15 @@ class FilesList {
         return this.filePath[position]
     }
     getFileName(position) {
-        return this.getPath(position).match(REGEX)
+        const filefullName = this.getPath(position).match(REGEX)
+        const shortName = filefullName[0].replace(this.getFileType(position), '')
+        return shortName
     }
     filesDirectory(){
-        return this.filePath[0].replace( this.getFileName(0), '')
+        return this.filePath[0].replace( `${this.getFileName(0)}${this.getFileType(0)}`, '')
+    }
+    getFileType(position){
+        return this.getPath(position).match(REGEX_TYPE)
     }
 
 }
@@ -29,7 +34,7 @@ let selectedFiles = [];
 folderButton.addEventListener('click', async () => {
     const {filePaths} = await window.systemApi.selectFiles();
 
-    const selectedFiles = new FilesList(filePaths)
+    selectedFiles = new FilesList(filePaths)
     elementQty.innerText = selectedFiles.size
     dirAddress.innerText = selectedFiles.filesDirectory()
 
@@ -38,7 +43,15 @@ folderButton.addEventListener('click', async () => {
 
 
 renameButton.addEventListener('click', () => {
-    const oldName = "entrada"
-    const newName = "saida"
-    window.systemApi.renameFiles(oldName, newName)
+    if(!selectedFiles.size){
+        console.log('Please chose the files to be changed')
+    }
+    
+    selectedFiles.filePath.forEach( (element, index) => {
+        const oldName = selectedFiles.getPath(index)
+        const newName = [selectedFiles.filesDirectory() ,prefixField.value, selectedFiles.getFileName(index), sulfixField.value, selectedFiles.getFileType(index)].join('')
+        window.systemApi.renameFiles(oldName, newName)
+        
+    })
+    console.log("files updated with success")
 })
