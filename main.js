@@ -1,4 +1,4 @@
-const { app, BrowserWindow} = require('electron');
+const { app, BrowserWindow, dialog, ipcMain} = require('electron');
 const path = require('path')
 
 process.env.NODE_ENV = 'devlopment';
@@ -11,6 +11,11 @@ function createMainWindow(){
         title: 'docRenamer',
         width: IS_DEV ? 1300: 800,
         height: 600,
+        webPreferences: {
+            contextIsolation: true,
+            nodeIntegration: true,
+            preload: path.join(__dirname, './preload.js')
+        }
     })
 
     if(IS_DEV){
@@ -21,6 +26,19 @@ function createMainWindow(){
 }
 
 app.whenReady().then( () => {
+    ipcMain.handle('fileSelect', filesSelectionHandler)
     createMainWindow();
 })
+
+//executable Functions
+async function filesSelectionHandler(){
+    const response = dialog.showOpenDialog({ properties: [ 'openFile', 'multiSelections']});
+    if( response.canceled ){
+        return
+    }
+    return response;
+
+};
+
+
 
