@@ -7,5 +7,6 @@ contextBridge.exposeInMainWorld('path', {
 });
 
 contextBridge.exposeInMainWorld('systemApi', {
-    selectFiles: () => ipcRenderer.invoke('fileSelect')
+    selectFiles: () => ipcRenderer.invoke('fileSelect'),
+    renameFiles: (oldName, newName) => ipcRenderer.invoke('fileRename', oldName, newName)
 })

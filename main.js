@@ -1,5 +1,6 @@
 const { app, BrowserWindow, dialog, ipcMain} = require('electron');
 const path = require('path')
+const fs = require ('fs')
 
 process.env.NODE_ENV = 'devlopment';
 
@@ -27,6 +28,9 @@ function createMainWindow(){
 
 app.whenReady().then( () => {
     ipcMain.handle('fileSelect', filesSelectionHandler)
+    ipcMain.handle('fileRename', (event, oldName, newName) => {
+        filesRenamer(oldName, newName)
+    })
     createMainWindow();
 })
 
@@ -40,5 +44,13 @@ async function filesSelectionHandler(){
 
 };
 
-
+function filesRenamer(oldName, newName){
+    fs.rename(oldName, newName, (error) => {
+        if(error){
+            console.error(`An error occours during the files renaming:  ${error.message}`)
+            return
+        }
+        console.log("Renamed successfully")
+    })    
+}
 
