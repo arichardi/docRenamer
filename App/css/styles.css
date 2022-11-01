@@ -1,0 +1,178 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../files/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../files/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../files/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+}
+
+
+
+
+:root{
+    --background: #EEEFEE;
+    --action: #E63946;
+    --lightColor: #457B9D;
+    --darkColor: #1D3557;
+
+    --regular: 400;
+    --bold: 700;
+    --extra-bold: 800;
+}
+
+
+body{
+    background-color: var(--background);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    font-family: "Montserrat";
+    line-height: 36px;
+   
+}
+
+h3 {
+    margin: 0;
+    font-family: "Montserrat";
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+strong {
+    font-size: 24px;
+    margin: 0 4px;
+}
+
+.logoContainer{
+    background-color: var(--darkColor);
+    padding-left: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.infoContainer{
+    background-color: var(--lightColor);
+    color: var(--background);
+    margin: 30px 30px 30px 30px;
+    padding: 20px 24px;
+    border-radius: 4px;
+}
+
+
+.numberElements, .directory{
+    font-weight: 800;   
+}
+
+
+.btn {
+    background-color: var(--darkColor);
+    color: var(--background);
+    height: 58px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 16px;
+}
+.btnSelectContainer {
+    display: flex;
+    justify-content: center;
+    padding-right: 30px;
+}
+
+.previewContainer {
+    margin: 52px 30px 0px 30px;
+    border-radius: 4px;
+    padding: 0 18px;
+    background-color: var(--lightColor);
+    color: var(--background);
+    display: flex;
+    align-items: center;
+}
+
+.namePreviewContainer{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.dataContainer{
+    margin: 28px 30px 98px 30px;
+    color: var(--lightColor);
+    font-family: "Montserrat";
+    font-size: 16px;
+}
+
+
+.btnRename {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 30px 28px 0px;
+}
+
+.datainform {
+    margin-bottom: 12px;
+}
+
+.CKB {
+    display: none;
+}
+
+.checkmark{
+    height: 24px;
+    width: 24px;
+    border: 2px solid var(--lightColor);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.datainform input:checked ~ .checkmark{
+    background-image: url('../files/check.svg');
+    background-size: contain;
+}
+
+
+#rename {
+   background-color: var(--action); 
+}
+
+.inputField {
+    background-color: #FAFAFA;
+    border: 2px solid var(--lightColor);
+    border-radius: 4px;
+    padding: 8px;
+    width: 45vw;    
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputName{
+    margin-left: 16px;
+}
+
+.checkboxNameField{
+    display: flex;
+    align-items: center;
+
+}
+
+label input[type='text']:disabled {
+    background-color: var(--background);
+}

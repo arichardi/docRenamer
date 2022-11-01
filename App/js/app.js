@@ -1,11 +1,16 @@
-const REGEX = /[A-Za-z0-9\u00C0-\u00FF]+_?[0-9]{0,2}?[.][a-z]{3}/gm
-const REGEX_TYPE = /[.][a-zA-Z]{3}?/
-const folderButton = document.querySelector('#folder-btn')
-const elementQty = document.querySelector('.numberElements')
-const dirAddress = document.querySelector('.directory')
-const renameButton = document.querySelector('#rename')
-const sulfixField = document.querySelector('#sulfix')
-const prefixField = document.querySelector('#prefix')
+const REGEX = /[A-Za-z0-9\u00C0-\u00FF]+_?[0-9]{0,2}?[.][a-z]{3}/gm;
+const REGEX_TYPE = /[.][a-zA-Z]{3}?/;
+const folderButton = document.querySelector('#folder-btn');
+const elementQty = document.querySelector('.numberElements');
+const dirAddress = document.querySelector('.directory');
+const renameButton = document.querySelector('#rename');
+const sulfixField = document.querySelector('#sulfixField');
+const prefixField = document.querySelector('#prefixField');
+const keepNameField = document.querySelector("#KeepNameField");
+const prefixCKB = document.querySelector("#prefix");
+const keepNameCKB = document.querySelector("#KeepName");
+const sulfixCKB = document.querySelector("#sulfix");
+const namePreview = document.querySelector('.namePreview')
 
 class FilesList {
     constructor(filePath){
@@ -45,6 +50,7 @@ folderButton.addEventListener('click', async () => {
 renameButton.addEventListener('click', () => {
     if(!selectedFiles.size){
         console.log('Please chose the files to be changed')
+        return
     }
     
     selectedFiles.filePath.forEach( (element, index) => {
@@ -55,3 +61,30 @@ renameButton.addEventListener('click', () => {
     })
     console.log("files updated with success")
 })
+
+
+
+prefixCKB.addEventListener('change', () => {
+    if(prefixCKB.checked){
+        prefixField.disabled = false;
+    }else{
+        prefixField.disabled = true;
+    }
+})
+keepNameCKB.checked = true
+keepNameCKB.addEventListener('change', () => {
+    if(keepNameCKB.checked){
+        keepNameField.disabled = true;
+    }else{
+        keepNameField.disabled = false;
+    }
+})
+sulfixCKB.addEventListener('change', () => {
+    if(sulfixCKB.checked){
+        sulfixField.disabled = false;
+    }else{
+        sulfixField.disabled = true;
+    }
+})
+
+

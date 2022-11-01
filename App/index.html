@@ -10,24 +10,68 @@
     <title>DocRenamer</title>
 </head>
 <body>
-    <h1>Choose an folder !</h1>
-    <label for="files"></label>
-    <input type="button" value="Select a folder" class="btn" id="folder-btn">
-    
-    <div>
-        <h2>Você selecionou o diretorio : </h2>
-        <h2 class="directory"></h2>
-        <h2>Nós temos <span class="numberElements"> 0 </span> arquivos nessa pasta</h2>
+    <div class="logoContainer">
+        <img src="./files/logo.svg" alt="logo" >
     </div>
-    <div>
-        <label for="prefix">Prefixo</label>
-        <input type="text" name="prefix" id="prefix">
-        <br>
-        <label for="sulfix">Sulfixo</label>
-        <input type="text" name="sulfixfix" id="sulfix">
-        <br>
+    
+    <div class="infoContainer">
+        <p>You selected <strong class="numberElements"> 0 </strong> files</p>
+        <p>on:</p>
+        <h3 class="directory">nothing selected</h3>
+    </div>
+
+    <div class="btnSelectContainer">
+        <label for="files"></label>
+        <input type="button" value="file Select" class="btn" id="folder-btn">
+    </div>
+    
+    <div class="previewContainer">
+        <p>name preview: </p>
+        <div class="namePreviewContainer">
+            <h3 class="namePreview">not informed</h3>
+        </div>
+    </div>
+
+    <div class="dataContainer">
+            <label for="prefix" class="datainform" id="LBPrefix">
+                <div class="checkboxNameField">
+                    <input type="checkbox" class="CKB" id="prefix">
+                    <div class="checkmark" id="CKPrefix"></div>
+                    <div class="inputName">Prefixo</div>
+                </div>
+                <div>
+                    <input type="text" id="prefixField" class="inputField" disabled>
+                </div>
+            </label>
+
+            <label for="KeepName" class="datainform">
+                <div class="checkboxNameField">
+                    <input type="checkbox" class="CKB" id="KeepName" >
+                    <div class="checkmark"></div>
+                    <div class="inputName">KeepName</div>
+                </div>
+                <div>
+                    <input type="text" id="KeepNameField" class="inputField" disabled>
+                </div>
+            </label>
+
+
+            <label for="sulfix" class="datainform">
+                <div class="checkboxNameField">
+                    <input type="checkbox" class="CKB" id="sulfix" >
+                    <div class="checkmark"> </div>
+                    <div class="inputName">Sulfix</div>
+                </div>
+                <div>
+                    <input type="text" id="sulfixField" class="inputField" disabled>
+                </div>
+            </label>
+                
+    </div>
+
+    <div class="btnRename">
         <label for="rename"></label>
-        <input type="button" value="Atualizar nome" class="btn" id="rename">
+        <input type="button" value="Rename-it" class="btn" id="rename">
     </div>
 </body>
 </html>

@@ -1,0 +1,11 @@
+-> Corrigir o RegEx de seleção de arquivos para nomes duplos
+-> fazer estilização do programa
+-> fazer uma opção para enumerar arquivos
+-> fazer uma opção para não manter o nome principal do arquivos
+-> Adequar o programa para MAC
+-> Adicionar icone para o programa
+-> Aprender como exportar o programa para instalação e uso
+-> fazer um README para o github
+-> Aproveitar o aprendizado para fazer materias para o meu blog
+-> Adicionar um novo projeto
+

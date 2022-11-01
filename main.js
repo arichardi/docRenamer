@@ -10,8 +10,8 @@ const IS_DEV = process.env.NODE_ENV !== 'development';
 function createMainWindow(){
     const mainWindow = new BrowserWindow({
         title: 'docRenamer',
-        width: IS_DEV ? 1300: 800,
-        height: 600,
+        width: IS_DEV ? 1100: 600,
+        height: 720,
         webPreferences: {
             contextIsolation: true,
             nodeIntegration: true,
