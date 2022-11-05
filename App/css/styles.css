@@ -30,9 +30,18 @@
 
 
 body{
+
     background-color: var(--background);
     margin: 0;
     box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 20;
+    font-family: "Montserrat";
+    line-height: 24px;
+    color: var(--darkColor);
 }
 
 p {
@@ -55,6 +64,7 @@ strong {
     font-size: 24px;
     margin: 0 4px;
 }
+
 
 .logoContainer{
     background-color: var(--darkColor);
@@ -180,4 +190,20 @@ label {
 
 label input[type='text']:disabled {
     background-color: var(--background);
+}
+
+.aboutFrase{
+    padding: 8px;
+    margin-top: 60px;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.aboutDetails{
+    padding: 8px;
+}
+
+.aboutDetails strong{
+    font-size: 16px;
+    color: var(--darkColor);
 }
