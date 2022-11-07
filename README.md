@@ -1,6 +1,6 @@
 <div align="center">
   <br>
-  <img alt="DocRenamer logo" src="../app/../docRenamer/App/files/Logo_blue.svg" width="300px">
+  <img alt="DocRenamer logo" src="https://github.com/arichardi/docRenamer/blob/main/App/files/Logo_blue.svg" width="300px">
   <h1> 📁 The easyest way to rename your files 📁</h1>
 <br>
 
@@ -35,7 +35,7 @@ with a specific prefix. With this in mind, I design a simple and beautiful app t
 <br>
 <div align="center">
 
-![appimage](../App/../docRenamer/App/files/Image_app.jpg)
+![appimage](https://github.com/arichardi/docRenamer/blob/main/App/files/Image_app.jpg)
 
 </div>
 
