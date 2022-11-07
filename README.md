@@ -30,7 +30,7 @@ DocRenamer is a aesy to use windows program made in electron to rename a large c
 On my daily basis is really common the necessity to rename a large collection to files, to adequate to a specific version, or
 with a specific prefix. With this in mind, I design a simple and beautiful app to help.
 
-🔽 If you want just download the exec files you can though this link
+🔽 If you want just download the exec files you can though this [link](https://www.mediafire.com/file/yvv3qdngi4imuh0/docRenamer-win32-x64.rar/file)
 
 <br>
 <div align="center">
