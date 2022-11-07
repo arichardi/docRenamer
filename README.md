@@ -35,7 +35,7 @@ with a specific prefix. With this in mind, I design a simple and beautiful app t
 <br>
 <div align="center">
 
-![appimage](https://github.com/arichardi/docRenamer/blob/main/App/files/Image_app.jpg)
+ <img src="https://github.com/arichardi/docRenamer/blob/main/App/files/Image_app.jpg" alt="DocRename screenshot" width="500">
 
 </div>
 
