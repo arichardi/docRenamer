@@ -1,7 +1,7 @@
 <div align="center">
   <br>
   <img alt="DocRenamer logo" src="https://github.com/arichardi/docRenamer/blob/main/App/files/Logo_blue.svg" width="300px">
-  <h1> 📁 The easyest way to rename your files 📁</h1>
+  <h1> 📁 The easiest way to rename your files 📁</h1>
 <br>
 
   <a href="https://www.electronjs.org/">
@@ -26,11 +26,11 @@
 
 # DocRenamer 
 
-DocRenamer is a aesy to use windows program made in electron to rename a large collection of files.
-On my daily basis is really common the necessity to rename a large collection to files, to adequate to a specific version, or
-with a specific prefix. With this in mind, I design a simple and beautiful app to help.
+DocRenamer is an easy-to-use windows program made in Electron to rename a large collection of files.
+On my daily basis it's really common the necessity to rename a large collection of files, to adequate to a specific version, or
+with a specific prefix. With this in mind, I designed a simple and beautiful app to help.
 
-🔽 If you want just download the exec files you can though this [link](https://www.mediafire.com/file/yvv3qdngi4imuh0/docRenamer-win32-x64.rar/file)
+🔽 If you want to download the exec files you can do it through this [link](https://www.mediafire.com/file/yvv3qdngi4imuh0/docRenamer-win32-x64.rar/file)
 
 <br>
 <div align="center">
@@ -41,8 +41,8 @@ with a specific prefix. With this in mind, I design a simple and beautiful app t
 
 # 🚀 Pre-requisites and Install
 
-You need to have pre-install the nodeJS 16+, and that's all.
-For install the code, you only need to copy the project to a folder and install the dependencies
+You need to have pre-installed the nodeJS 16+, and that's all.
+To install the code, you only need to copy the project to a folder and install the dependencies
 
 
 ```bash
@@ -50,14 +50,14 @@ npm install
 ```
 # 🏃 running
 
-To run the program, I recommend change de mainJS process.env to development, and run the
-program in devmode. It will execute the packages with electromon updating automaticaly any changes
+To run the program, I recommend changing the mainJS process.env to development, and run the
+program in devmode. It will execute the packages with electromon updating automatically any changes
 and the program will open with inspect mode already in mind
 
 In main.js -> line 6
 ```Javascript
 
-process.env.NODE_ENV = 'devolpment';
+process.env.NODE_ENV = 'development';
 
 const IS_DEV = process.env.NODE_ENV !== 'production';
 
@@ -67,17 +67,17 @@ running the program
 ```bash
 npm run devmode
 ```
-# 🤖Estructure
+# 🤖Structure
 
-If you like me, has the habit to look in the others project to understand or help yourfself with your 
-project, understanding how I organize my files could be some help
+If you are like me, whom has the habit of looking in the others project to understand or imporving your own projects,
+understanding how I organize my files could be a great help
 
 The project has 3 main files
 
     main.js
 
-This is the entry file. Is responsible for creating windows and the menu, and execute some function
-using an node Api that app.js (responsible for the view) file can't use
+This is the entry file. It's responsible for creating windows and the menu, and it executes some functions
+using an node Api that app.js (responsible for the view) file can't us
 
     preload.js
 
@@ -85,14 +85,14 @@ Preload will make the bridge between the call made by the app.js (view responsab
 
     app.js
 
-File responsable for the buttons clicks and other things related to the view
+File responsible for the buttons clicks and other things related to the view
 
 # 🧰 build 
 
 The process of building was made using the electron-forge.
 
-For generate a new build, change the main.js file back to production and run the make comand
-It will generate all the files in a out folder, newly created.
+To generate a new build, change the main.js file back to production and run the make comand
+It will generate all the files in a out folder, recently created.
 
 
 ```bash
@@ -101,5 +101,5 @@ npm make
 
 # 🌱Licensing
 
-MIT ©DocRenamer
+MIT ©DocRenamer.
 
